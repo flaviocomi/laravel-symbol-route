@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/first', 'MainController@getFirstPage');
+
+Route::get('/second', function(){
+    return view('secondPage');
+});

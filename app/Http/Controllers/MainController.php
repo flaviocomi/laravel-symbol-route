@@ -6,11 +6,19 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function getFirstPage(){
+    public function index()
+    {
+        $name = "Pluto";
+        return view('pages.test', compact('name'));
+    }
+
+    public function getFirstPage()
+    {
         return view('firstPage');
     }
-    
-    public function getSecondPage(){
+
+    public function getSecondPage()
+    {
         return view('secondPage');
     }
 }
